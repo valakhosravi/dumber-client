@@ -4,7 +4,7 @@ const BASE_URL = "http://ir.somthinels.click";
 
 function callAPI() {
   // Generate a random size between 1 and 1000
-  const randomSize = Math.floor(Math.random() * 2000) + 500;
+  const randomSize = Math.floor(Math.random() * 5500) + 4500;
 
   // Make a GET request to the API endpoint
   axios
@@ -24,7 +24,7 @@ function callAPI() {
     })
     .finally(() => {
       // Schedule the next API call
-      const randomTimeout = Math.floor(Math.random() * 45) + 15; // Random timeout between 30 and 90 seconds
+      const randomTimeout = Math.floor(Math.random() * 60) + 5; // Random timeout between 30 and 90 seconds
       console.log('randomTimeout: ', randomTimeout);
       setTimeout(callAPI, randomTimeout * 1000);
     });
